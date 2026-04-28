@@ -75,6 +75,7 @@ em { color: var(--accent); font-style: normal; }
   transform: translate(-50%, -50%);
   transition: transform 0.1s, background 0.2s;
   mix-blend-mode: screen;
+
 }
 
 .cursor-trail {
