@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasvi Bali — AI/ML Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Neural Network Canvas Background -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>VB<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link" data-text="about">about</a></li>
+      <li><a href="#experience" class="nav-link" data-text="experience">experience</a></li>
+      <li><a href="#projects" class="nav-link" data-text="projects">projects</a></li>
+      <li><a href="#skills" class="nav-link" data-text="skills">skills</a></li>
+      <li><a href="#contact" class="nav-link" data-text="contact">contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">available for roles</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <div class="hero-tag glitch-text" data-text="// AI/ML ENGINEER">// AI/ML ENGINEER</div>
+      <h1 class="hero-name">
+        <span class="name-line" id="nameAnimate">VASVI</span>
+        <span class="name-line accent" id="nameAnimate2">BALI</span>
+      </h1>
+      <p class="hero-sub">
+        Building intelligent systems at the intersection of<br />
+        <span class="typewriter" id="typewriter"></span>
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="95">0</span><span>%</span>
+          <span class="stat-label">anomaly detection accuracy</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span><span>×</span>
+          <span class="stat-label">SIH national qualifier</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-target="8">0</span><span>.5</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">
+          <span>view work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="mailto:vasvibali@gmail.com" class="btn-secondary">get in touch</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="model-visual">
+        <div class="model-card">
+          <div class="model-header">
+            <span class="model-label">MODEL_ACCURACY</span>
+            <span class="model-tag">LIVE</span>
+          </div>
+          <div class="model-chart" id="modelChart"></div>
+          <div class="model-metrics">
+            <div class="metric">
+              <span class="metric-label">precision</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="--target: 95%"></div>
+              </div>
+            </div>
+            <div class="metric">
+              <span class="metric-label">recall</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="--target: 92%"></div>
+              </div>
+            </div>
+            <div class="metric">
+              <span class="metric-label">f1-score</span>
+              <div class="metric-bar">
+                <div class="metric-fill" style="--target: 88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="section-label">01 — ABOUT</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading">Architecting<br /><span class="accent">intelligence</span></h2>
+          <p>AI/ML-focused Computer Science undergraduate at IILM University (B.Tech '27), specializing in computer vision, deep learning, and intelligent system design.</p>
+          <p>I build things that <em>see</em>, <em>learn</em>, and <em>adapt</em> — from real-time proctoring systems deployed on Microsoft Azure to RAG-powered educational agents with MicroAgent architectures.</p>
+          <p>Two-time national round qualifier at Smart India Hackathon. I lead with code and communicate with clarity.</p>
+          <div class="about-location">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2" />
+              <path d="M7 1C4.24 1 2 3.24 2 6c0 3.75 5 7 5 7s5-3.25 5-7c0-2.76-2.24-5-5-5z" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+            Jammu & Kashmir, India
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <div class="card-icon">⚡</div>
+            <h3>Computer Vision</h3>
+            <p>YOLO, CNN, real-time inference pipelines. I make machines see the world.</p>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">🧠</div>
+            <h3>Deep Learning</h3>
+            <p>TensorFlow, LSTM, DBSCAN. End-to-end model design to deployment.</p>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">🤖</div>
+            <h3>Generative AI</h3>
+            <p>LangChain, RAG, Prompt Engineering. Building agents that reason.</p>
+          </div>
+          <div class="info-card">
+            <div class="card-icon">☁️</div>
+            <h3>Cloud Deployment</h3>
+            <p>Microsoft Azure — model serving, logging, monitoring at scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience" id="experience">
+    <div class="section-inner">
+      <div class="section-label">02 — EXPERIENCE</div>
+      <h2 class="section-heading">Where I've<br /><span class="accent">worked</span></h2>
+      <div class="timeline">
+        <div class="timeline-item active">
+          <div class="timeline-meta">
+            <span class="timeline-date">Jun 2025 — Jul 2025</span>
+            <span class="timeline-badge">Internship</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>AI/ML Intern</h3>
+              <span class="timeline-company">Enfuse Solutions Pvt. Ltd. · Mumbai</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Engineered an AI-powered proctoring system using YOLO, LSTM, CNN, DBSCAN, and Random Forest — deployed on Microsoft Azure achieving <strong>95% anomaly detection accuracy</strong> and improving exam integrity by 40%.</li>
+              <li>Performed data preprocessing and feature engineering using pandas and NumPy; managed model training pipelines with TensorFlow across iterative experiments.</li>
+              <li>Reduced false-positive rate by optimizing DBSCAN clustering parameters after benchmarking against K-Means.</li>
+              <li>Authored an academic research paper detailing system architecture, model selection rationale, and benchmark results.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>YOLO</span><span>LSTM</span><span>CNN</span><span>DBSCAN</span><span>Azure</span><span>TensorFlow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="awards-row">
+        <div class="award-card">
+          <div class="award-year">2025</div>
+          <div class="award-info">
+            <h4>Smart India Hackathon — National Round</h4>
+            <p>Qualified among top teams from 225+ submissions. Led computer vision module design.</p>
+          </div>
+          <div class="award-badge">🏆</div>
+        </div>
+        <div class="award-card">
+          <div class="award-year">2024</div>
+          <div class="award-info">
+            <h4>Smart India Hackathon — National Round</h4>
+            <p>Qualified from 132+ teams. Contributed to system architecture and technical documentation.</p>
+          </div>
+          <div class="award-badge">🏆</div>
+        </div>
+        <div class="award-card">
+          <div class="award-year">2023</div>
+          <div class="award-info">
+            <h4>Dark Pattern Buster Hackathon</h4>
+            <p>Nodal Centre Qualifier from 50+ teams. Led frontend design and UI/UX.</p>
+          </div>
+          <div class="award-badge">🎖️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <div class="section-inner">
+      <div class="section-label">03 — PROJECTS</div>
+      <h2 class="section-heading">Selected<br /><span class="accent">builds</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Computer Vision · Cloud</span>
+              <div class="project-links">
+                <a href="https://github.com/vasvibali" target="_blank" class="icon-link" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3>AI-Powered Proctoring System</h3>
+            <p>Multi-model inference pipeline integrating YOLO for object detection, CNN for facial recognition, and LSTM for behavioural anomaly tracking. Deployed live on Microsoft Azure with real-time monitoring dashboards.</p>
+            <div class="project-highlight">
+              <span>95% detection accuracy</span>
+              <span>40% integrity improvement</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Python</span><span>YOLO</span><span>CNN</span><span>LSTM</span><span>DBSCAN</span><span>TensorFlow</span><span>Azure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Generative AI · RAG</span>
+              <div class="project-links">
+                <a href="https://github.com/vasvibali" target="_blank" class="icon-link" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3>EduMind</h3>
+            <p>AI-powered learning assistant built on MicroAgent Architecture — each agent is stateless and handles a single task, mirroring production-grade systems. Generates MCQs, short answers, and delivers personalized feedback instantly.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span>Python</span><span>LangChain</span><span>ChromaDB</span><span>Streamlit</span><span>RAG</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="section-inner">
+      <div class="section-label">04 — SKILLS</div>
+      <h2 class="section-heading">Tech<br /><span class="accent">stack</span></h2>
+      <div class="skills-layout">
+        <div class="skills-col">
+          <div class="skill-group">
+            <h4 class="skill-group-label">// Languages</h4>
+            <div class="skill-chips">
+              <span>Python</span><span>C/C++</span><span>Java</span><span>SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label">// ML / DL Frameworks</h4>
+            <div class="skill-chips">
+              <span>TensorFlow</span><span>scikit-learn</span><span>PyTorch</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label">// Algorithms & Architectures</h4>
+            <div class="skill-chips">
+              <span>CNN</span><span>LSTM</span><span>YOLO</span><span>DBSCAN</span><span>Random Forest</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-col">
+          <div class="skill-group">
+            <h4 class="skill-group-label">// AI & Domain</h4>
+            <div class="skill-chips">
+              <span>Computer Vision</span><span>NLP</span><span>Generative AI</span><span>Prompt Engineering</span><span>DSA</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label">// Data & Analysis</h4>
+            <div class="skill-chips">
+              <span>pandas</span><span>NumPy</span><span>matplotlib</span><span>Jupyter</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label">// Cloud & Tools</h4>
+            <div class="skill-chips">
+              <span>Microsoft Azure</span><span>OpenAI API</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Anaconda</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-col certs-col">
+          <h4 class="skill-group-label">// Certifications</h4>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="cert-provider">AWS</div>
+              <div class="cert-name">AI Fundamentals</div>
+              <div class="cert-date">Feb 2025</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-provider">Guvi HCL</div>
+              <div class="cert-name">ChatGPT For Everyone</div>
+              <div class="cert-date">Apr 2025</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-provider">Guvi HCL</div>
+              <div class="cert-name">Generative AI Landscape</div>
+              <div class="cert-date">May 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="section-inner">
+      <div class="section-label">05 — CONTACT</div>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="section-heading">Let's build<br /><span class="accent">something</span></h2>
+          <p class="contact-sub">Open to internships, research collaborations, and full-time roles in AI/ML. Let's connect.</p>
+        </div>
+        <div class="contact-right">
+          <div class="contact-links">
+            <a href="mailto:vasvibali@gmail.com" class="contact-link">
+              <div class="contact-link-icon">✉</div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">vasvibali@gmail.com</span>
+              </div>
+              <svg class="contact-link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/vasvi-bali" target="_blank" class="contact-link">
+              <div class="contact-link-icon">in</div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val">linkedin.com/in/vasvi-bali</span>
+              </div>
+              <svg class="contact-link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="https://github.com/vasvibali" target="_blank" class="contact-link">
+              <div class="contact-link-icon">gh</div>
+              <div class="contact-link-info">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val">github.com/vasvibali</span>
+              </div>
+              <svg class="contact-link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">VASVI BALI © 2025</span>
+      <span class="footer-tag">// built with passion & curiosity</span>
+      <span class="footer-loc">J&K, India</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
