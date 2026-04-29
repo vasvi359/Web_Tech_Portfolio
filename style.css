@@ -23,6 +23,7 @@
   --font-display: 'Syne', sans-serif;
   --radius: 4px;
   --radius-md: 8px;
+   cursor:pointer;
 }
 
 /* ---- Reset & Base ---- */
